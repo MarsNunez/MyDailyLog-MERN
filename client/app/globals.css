@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container_content h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.container_content h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.container_content h2 {
+  margin-bottom: 5px;
+}
+
+.container_content p {
+  font-size: 16px;
+}
