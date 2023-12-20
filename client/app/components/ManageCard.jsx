@@ -26,7 +26,10 @@ const ManageCard = ({ post }) => {
         </Link>
         <button
           onClick={() => {
-            axios.delete("http://localhost:3001/delete/" + _id);
+            // axios.delete("http://localhost:3001/delete/" + _id);
+            axios.delete(
+              "https://my-daily-log-mern-server.vercel.app/delete/" + _id
+            );
           }}
           className="bg-red-500 rounded-md px-3 py-1 text-white"
         >

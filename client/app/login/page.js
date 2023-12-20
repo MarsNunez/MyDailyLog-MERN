@@ -13,10 +13,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const login = async () => {
-      const response = await axios.post("http://localhost:3001/login", {
-        username,
-        password,
-      });
+      // const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post(
+        "https://my-daily-log-mern-server.vercel.app/login",
+        {
+          username,
+          password,
+        }
+      );
       if (response.data.message) return setMessage(response.data.message);
       setMessage("");
 

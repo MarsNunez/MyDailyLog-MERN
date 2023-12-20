@@ -9,9 +9,13 @@ const Card = ({ post }) => {
 
   useEffect(() => {
     const getUserData = async () => {
-      const response = await axios.post("http://localhost:3001/get-user", {
-        userID: author,
-      });
+      // const response = await axios.post("http://localhost:3001/get-user", {
+      const response = await axios.post(
+        "https://my-daily-log-mern-server.vercel.app/get-user",
+        {
+          userID: author,
+        }
+      );
       setUsername(response.data.username);
     };
     getUserData();

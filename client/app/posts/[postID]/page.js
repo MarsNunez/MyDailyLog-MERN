@@ -17,7 +17,8 @@ const PostPage = () => {
   useEffect(() => {
     const getPost = async () => {
       const response = await axios.get(
-        "http://localhost:3001/posts/" + params.postID
+        // "http://localhost:3001/posts/" + params.postID
+        "https://my-daily-log-mern-server.vercel.app/posts/" + params.postID
       );
       setPost(response.data);
     };

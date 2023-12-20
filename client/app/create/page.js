@@ -25,7 +25,11 @@ const CreatePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3001/create", post);
+    // await axios.post("http://localhost:3001/create", post);
+    await axios.post(
+      "https://my-daily-log-mern-server.vercel.app/create",
+      post
+    );
     router.push("/");
   };
 

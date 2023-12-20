@@ -10,7 +10,7 @@ app.use(express.json()); // Solo usar cuando estemos recibiendo datos en json
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Zzup!");
+  res.json("Zzup!");
 });
 
 app.use(UserRoutes);

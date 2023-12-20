@@ -20,7 +20,8 @@ const EditPost = () => {
   useEffect(() => {
     const getPost = async () => {
       const response = await axios.get(
-        "http://localhost:3001/posts/" + params.postID
+        // "http://localhost:3001/posts/" + params.postID
+        "https://my-daily-log-mern-server.vercel.app/posts/" + params.postID
       );
       setPost(response.data);
       // console.log(response);
@@ -33,7 +34,11 @@ const EditPost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put("http://localhost:3001/edit/" + post._id, post);
+    // await axios.put("http://localhost:3001/edit/" + post._id, post);
+    await axios.put(
+      "https://my-daily-log-mern-server.vercel.app/edit/" + post._id,
+      post
+    );
     // console.log(response);
     router.push("/");
   };

@@ -8,7 +8,10 @@ export default function Home() {
 
   useEffect(() => {
     const getPost = async () => {
-      const response = await axios.get("http://localhost:3001/get-posts");
+      // const response = await axios.get("http://localhost:3001/get-posts");
+      const response = await axios.get(
+        "https://my-daily-log-mern-server.vercel.app/get-posts"
+      );
       setPosts(response.data.posts);
     };
     getPost();
